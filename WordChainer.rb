@@ -1,9 +1,11 @@
+require "set"
+
 class WordChainer
     def initialize(dictionary_file_name)
-        @dictionary =[]
+        @dictionary = Set.new
         
         File.foreach(dictionary_file_name) do |word|
-            @dictionary << word.chomp
+            @dictionary.add(word.chomp)
         end
     end
     
