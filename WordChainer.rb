@@ -17,7 +17,7 @@ class WordChainer
     
     def word_diff(dictionary_word, word)
         diff_counter = 0
-        word.split.each_with_index do |c, index|
+        word.split('').each_with_index do |c, index|
             unless dictionary_word[index] == c
                 diff_counter += 1
             end
